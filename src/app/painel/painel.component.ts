@@ -30,7 +30,6 @@ export class PainelComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    console.log(`componente painel destruido`)
   }
 
   public atualizaResposta(resposta: Event): void {
@@ -48,7 +47,6 @@ export class PainelComponent implements OnInit, OnDestroy {
           /*fluxo de acertos 100%*/
           if (this.rodada === 4) {
             this.encerrarJogo.emit('vitoria');
-            alert('Concluio todas as traduções com sucesso');
           }
 
           /*atualiza o objeto rodadaFrase*/
@@ -63,7 +61,6 @@ export class PainelComponent implements OnInit, OnDestroy {
 
         if (this.tentativas === -1) {
           this.encerrarJogo.emit('derrota');
-          alert('Você perdeu todas as tentativas');
         }
       }
   }
